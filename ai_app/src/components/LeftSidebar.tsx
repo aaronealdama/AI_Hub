@@ -42,11 +42,8 @@ const NAVIATION_ITEMS = [
 
 const LeftSidebar = () => {
     return (
-      <div className="w-full h-full flex justify center items-center relative">
-        <div className="max-w-screenlg w-full h-full flex relative">
-            {/* left sidebar for navigation/header */}
-            <section className="fixed w[275px] flex flex-col items-stretch h-screen">
-              <div className='flex flex-col items-stretch h-screen space-y-4 mt-4'>
+            <section className="sticky top-0 w-[23%] flex flex-col items-stretch h-screen">
+              <div className='flex flex-col items-stretch h-full space-y-4 mt-4'>
                 {NAVIATION_ITEMS.map((item) => (
                     <Link 
                     className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit 
@@ -60,7 +57,7 @@ const LeftSidebar = () => {
                         {item.title !== "AI_Hub" && <div>{item.title}</div>}
                     </Link>
                   ))}
-                  <button className='rounded-full m-4 bg-primary px-6 py-4 text-center hover:bg-opacity-70 transition
+                  <button className='rounded-full bg-AI_hub_color px-6 py-4 text-center hover:bg-opacity-70 transition
                   duation-200'>
                     Upload
                   </button>
@@ -80,12 +77,8 @@ const LeftSidebar = () => {
                   
               </button>
               </div>
-            </section>
-            {/*<main>Home timelime</main>
-            <section>right section</section>*/}
-        </div>
-        
-      </div>
+         </section>
+          
     )
 }
 
