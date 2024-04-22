@@ -9,19 +9,9 @@ import { headers, cookies } from "next/headers";
 
 
 const Home = async () => {
-
-  const supabase = createServerComponentClient<Database>({
-    headers,
-    cookies,
-  })
-
-  const {data, error} = await supabase.auth.getUser();
-
-  console.log({ data, error });
-
   return (
     <div className="w-full h-full flex justify center items-center text-white relative bg-black">
-      <div className="max-w-[70vw] w-full h-full flex relative">
+      <div className="xl:max-w-[70vw] w-full h-full flex relative">
           <LeftSidebar/>
           <MainComponent/>
           <RightSection/>
